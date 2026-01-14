@@ -1,10 +1,9 @@
-/* Base page styles */
 body {
   background: #ffffff;
   font-family: "Times New Roman", Georgia, serif;
   margin: 0;
   padding: 40px;
-  color: black; /* default text color */
+  color: black; 
 }
 
 .page {
@@ -14,7 +13,6 @@ body {
   border: 1px solid #999;
 }
 
-/* Title */
 h1 {
   text-align: center;
   letter-spacing: 3px;
@@ -22,7 +20,6 @@ h1 {
   margin-bottom: 20px;
 }
 
-/* Subheading */
 .subhead {
   text-align: center;
   color: #1f5faa;
@@ -41,7 +38,6 @@ h1 {
   margin: 15px auto 0;
 }
 
-/* Body text */
 p {
   font-size: 18px;
   line-height: 1.6;
@@ -52,7 +48,6 @@ p {
   font-style: italic;
 }
 
-/* List */
 ol {
   font-size: 18px;
   line-height: 1.6;
@@ -63,7 +58,6 @@ li {
   margin-bottom: 15px;
 }
 
-/* Logo */
 .logo {
   text-align: center;
   margin-top: 60px;
@@ -81,16 +75,12 @@ li {
   letter-spacing: 4px;
 }
 
-/* ===================== */
-/* DARK MODE OVERRIDES   */
-/* ===================== */
 
 body.dark {
   background: #121212;
   color: white;
 }
 
-/* Force ALL blue text to turn white */
 body.dark .subhead,
 body.dark .logo,
 body.dark .logo .byu,
@@ -98,7 +88,6 @@ body.dark .logo .idaho {
   color: white;
 }
 
-/* Optional: divider line in dark mode */
 body.dark .subhead::after {
   background: #555;
 }
