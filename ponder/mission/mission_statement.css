@@ -1,8 +1,10 @@
+/* Base page styles */
 body {
   background: #ffffff;
   font-family: "Times New Roman", Georgia, serif;
   margin: 0;
   padding: 40px;
+  color: black; /* default text color */
 }
 
 .page {
@@ -77,4 +79,26 @@ li {
 .logo .idaho {
   font-size: 28px;
   letter-spacing: 4px;
+}
+
+/* ===================== */
+/* DARK MODE OVERRIDES   */
+/* ===================== */
+
+body.dark {
+  background: #121212;
+  color: white;
+}
+
+/* Force ALL blue text to turn white */
+body.dark .subhead,
+body.dark .logo,
+body.dark .logo .byu,
+body.dark .logo .idaho {
+  color: white;
+}
+
+/* Optional: divider line in dark mode */
+body.dark .subhead::after {
+  background: #555;
 }
