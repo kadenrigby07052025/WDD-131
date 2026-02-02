@@ -1,0 +1,12 @@
+body {
+    background-color: black;
+    background-image: url(ponder/modal_gallery/images/book-full.jpg);
+}
+nav {
+    font-style: normal;
+    text-align: center;
+    background-color: white;
+    border-radius: 10px;
+    border-color: aqua;
+    justify-content: center;
+}
