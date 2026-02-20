@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prove - Credit Card Form</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💳</text></svg>">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main>
+        <form id="creditCardForm">
+            <div class="cards-container">
+                
+                <div class="card back-card">
+                    <div class="magnetic-strip"></div>
+                    <div class="cvc-container">
+                        <label for="cvc">CVC/CVV</label>
+                        <input type="text" id="cvc" name="cvc" placeholder="xxx" required maxlength="3">
+                    </div>
+                </div>
+
+                <div class="card front-card">
+                    <div class="header-total">TOTAL: $199</div>
+                    <div class="header-icon">💳</div>
+                    
+                    <div class="input-group card-number-group">
+                        <label for="cardNumber">CARD NUMBER</label>
+                        <input type="text" id="cardNumber" name="cardNumber" placeholder="1234 5678 9101 1020" required>
+                    </div>
+
+                    <div class="input-group cardholder-group">
+                        <label for="cardholderName">CARD HOLDER</label>
+                        <input type="text" id="cardholderName" name="cardholderName" placeholder="John Doe" required>
+                    </div>
+
+                    <div id="cardExpiration" class="input-group">
+                        <label id="expirationDate" for="expirationDate">EXPIRATION</label>
+                        <div class="expiration-inputs">
+                            <input type='text' id='month' name="expMonth" placeholder="MM" aria-labelledby="expirationDate" maxlength="2" required>
+                            <input type='text' id='year' name="expYear" placeholder="YY" aria-labelledby="expirationDate" maxlength="2" required>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="submit-container">
+                <button type="submit" class="submit-btn">Submit</button>
+            </div>
+        </form>
+        
+        <div id="feedback" class="hidden"></div>
+    </main>
+</body>
+</html>

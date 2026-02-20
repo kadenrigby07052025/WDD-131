@@ -1,0 +1,161 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #ffffff;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* --- Container for Overlapping Cards --- */
+.cards-container {
+    position: relative;
+    width: 550px; 
+    height: 350px; 
+    margin-bottom: 20px;
+}
+
+/* --- Shared Card Styles --- */
+.card {
+    background-color: #ccc; /* Light gray from the image */
+    border-radius: 10px;
+    box-shadow: 4px 6px 15px rgba(0, 0, 0, 0.4);
+    width: 420px;
+    height: 240px;
+    position: absolute;
+}
+
+/* --- Back Card Styling --- */
+.back-card {
+    top: 60px; /* Offset down */
+    left: 100px; /* Offset right */
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.magnetic-strip {
+    background-color: black;
+    height: 50px;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.cvc-container {
+    align-self: flex-end;
+    margin-top: 40px;
+    margin-right: 20px;
+    width: 80px;
+}
+
+/* --- Front Card Grid Layout --- */
+.front-card {
+    top: 0;
+    left: 0;
+    z-index: 2;
+    padding: 25px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto auto auto;
+    row-gap: 20px;
+    column-gap: 15px;
+}
+
+.header-total {
+    grid-column: 1 / 2;
+    font-size: 1.4rem;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.header-icon {
+    grid-column: 2 / 3;
+    text-align: right;
+    font-size: 2rem;
+    line-height: 1;
+}
+
+.card-number-group {
+    grid-column: 1 / -1; 
+}
+
+.cardholder-group {
+    grid-column: 1 / 2;
+}
+
+#cardExpiration {
+    grid-column: 2 / 3;
+}
+
+/* --- Input & Typography Styling --- */
+.input-group label, .cvc-container label {
+    display: block;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    color: #000;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #777;
+    border-radius: 3px;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.expiration-inputs {
+    display: flex;
+    gap: 5px;
+}
+
+.expiration-inputs input {
+    width: 50px;
+    text-align: center;
+}
+
+/* --- Submit Button --- */
+.submit-container {
+    display: flex;
+    justify-content: flex-end;
+    width: 550px; /* Match the cards-container width */
+}
+
+.submit-btn {
+    padding: 10px 30px;
+    font-size: 1.1rem;
+    background-color: #eee;
+    border: 2px solid #000;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+}
+
+.submit-btn:hover {
+    background-color: #ddd;
+}
+
+/* --- Feedback Messages --- */
+#feedback {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    width: 550px;
+    text-align: center;
+}
+
+.hidden { display: none; }
+.success { background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+.error { background-color: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
