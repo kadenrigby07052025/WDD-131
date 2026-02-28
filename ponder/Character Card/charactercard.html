@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Card</title>
+    <meta name="description" content="A simple interactive RPG character card for my WDD131 class.">
+    
+    <meta property="og:title" content="My Character Card">
+    <meta property="og:description" content="Check out my RPG character's stats!">
+    <meta property="og:image" content="https://via.placeholder.com/400x300">
+    <meta property="og:url" content="https://yourgithubusername.github.io/wdd131/charactercard">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script> 
+</head>
+<body>
+    <header style="text-align: center; margin-top: 20px;">
+        <h1>WDD131: Character Card Assignment</h1>
+        <h2>By: Kaden Rigby</h2>
+        <p>A JavaScript object demonstration featuring properties and methods to update the DOM.</p>
+    </header>
+
+    <div class="card">
+        <img id="charImage" class="image" src="" alt="Character Portrait">
+        <div id="charName" class="name"></div>
+        
+        <div class="stats">
+            <p id="charClass"></p>
+            <p id="charLevel"></p>
+            <p id="charHealth"></p>
+        </div>
+
+        <div class="buttons">
+            <button id="attackBtn">Attacked</button>
+            <button id="levelBtn">Level Up</button>
+        </div>
+    </div>
+
+</body>
+</html>
