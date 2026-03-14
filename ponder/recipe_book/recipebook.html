@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recipe Book - Apple Crisp</title>
-    <author content="Kaden Rigby"></author>
-    <description content="Recipe book prove assignment"></description>
+    <title>Recipe Book</title>
+    <meta name="author" content="Kaden Rigby">
+    <meta name="description" content="Recipe book prove assignment">
 
     <meta property="og:type" content="website">
     <meta property="og:title" content="Apple Crisp Recipe">
@@ -19,6 +19,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="recipe.css">
+    <script defer src="recipe.js"></script> 
 </head>
 <body>
 
@@ -29,35 +30,15 @@
         </div>
         
         <div class="search-bar">
-            <input type="text" placeholder="Find a recipe">
-            <button aria-label="Search"><img src="images/search.svg" alt="Search Icon"></button>
+            <input type="text" id="search-input" placeholder="Find a recipe">
+            <button id="search-btn" aria-label="Search"><img src="images/search.svg" alt="Search Icon"></button>
         </div>
     </header>
 
     <hr class="divider">
 
-    <main>
-        <article class="recipe-card">
-            <div class="image-wrapper">
-                <img src="images/apple-crisp.jpg" alt="Apple Crisp">
-            </div>
-            
-            <div class="content-wrapper">
-                <span class="tag">dessert</span>
-                <h2>APPLE CRISP</h2>
-                
-                <div class="rating" role="img" aria-label="Rating: 4 out of 5 stars">
-                    <span aria-hidden="true">⭐</span>
-                    <span aria-hidden="true">⭐</span>
-                    <span aria-hidden="true">⭐</span>
-                    <span aria-hidden="true">⭐</span>
-                    <span aria-hidden="true">☆</span>
-                </div>
-                
-                <p class="description">This apple crisp recipe is a simple yet delicious fall dessert that's great served warm with vanilla ice cream.</p>
-            </div>
-        </article>
-    </main>
+    <main id="recipe-container">
+        </main>
 
     <footer>
         <div class="attribution">
